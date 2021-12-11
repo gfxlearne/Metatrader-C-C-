@@ -1,2 +1,2 @@
 # Metatrader-Programming
-Writing Scripts, indicators and Expert advisors for Metatrader.
+Writing scripts, indicators, expert advisors, classes for Metatrader.
