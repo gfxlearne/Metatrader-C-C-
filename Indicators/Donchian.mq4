@@ -1,6 +1,6 @@
 //+------------------------------------------------------------------+
-//|                                                   Z_Donchian.mq4 |
-//|                        Copyright 2020, MetaQuotes Software Corp. |
+//|                                                     Donchian.mq4 |
+//|                                                              gfx |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
 #property copyright "gfx"
