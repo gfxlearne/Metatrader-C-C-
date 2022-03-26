@@ -23,7 +23,7 @@ enum Mode
    CloseALLandPending
   };
 
-input string EAComment = "Bonnitta EA";
+input string EAComment = "CloseALL EA";
 input Mode TypeOfClose = CloseALL;
 input string Currency  = "";
 input int Magic_Ticket = 1;
