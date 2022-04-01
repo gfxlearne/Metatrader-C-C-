@@ -53,13 +53,16 @@ int OnCalculate(const int rates_total,
                 const long &volume[],
                 const int &spread[])
 {
-   
+
+   //if( rates_total == prev_calculated ) return rates_total; // only trade on new bar
+    
    int limit = rates_total-prev_calculated; // usually equal to 0, unless first tick of new bar(equal to 1). and unless the first time we drop the indicator on the chart      
 
    if(prev_calculated==0) // first time we drop the indicator on the chart   , (!prev_calculated)  
       limit = limit-3;// added -3 because to prevent array out of range (because we check i in the for loop)  
-   
-   for(int i=limit-1;i>=0;i--) // calculate Green/Red histogram  (for ease of logic thinking)    
+ 
+   for(int i=limit-1;i>=0;i--) // calculate Green/Red histogram  (for ease of logic thinking)       
+   //for(int i=limit-1;i>=1;i--) // calculate Green/Red histogram  (for ease of logic thinking)    // only on new bar
    { 
       bool DOWN  =  High[i+2] >= High[i+1] && High[i+1]>=  High[i+0] &&  
                     Low[i+2]  <= Low[i+1] &&  Low[i+1]  <= Low[i+0];
