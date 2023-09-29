@@ -37,6 +37,7 @@ int OnInit()
    if(StringCompare( StringSubstr(_Symbol,0,6),"EURUSD", true ) == 0)
    {
       hour=7;
+      Print("###############EURUSD################");
       return (INIT_SUCCEEDED);
    }
 
@@ -62,11 +63,18 @@ int OnInit()
 //+------------------------------------------------------------------+
 void OnDeinit(const int reason)
 {
+   
+}
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
 
    MqlDateTime t;
    TimeToStruct(iTime(_Symbol,PERIOD_CURRENT,0),t);
    if(t.hour!=hour) return;
-   
+
    // check if magic numbers still in pending orders
    ulong ticket;
    bool newbuy=true, newsell=true;
@@ -127,14 +135,5 @@ void OnDeinit(const int reason)
 
 
    
-   
 }
-//+------------------------------------------------------------------+
-//| Expert tick function                                             |
-//+------------------------------------------------------------------+
-void OnTick()
-  {
-//---
-   
-  }
 //+------------------------------------------------------------------+
