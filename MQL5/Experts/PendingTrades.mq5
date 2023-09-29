@@ -8,6 +8,7 @@
 #property version   "1.00"
 
 
+
 #include <Trade/Trade.mqh>
 CTrade trade;
 
@@ -79,7 +80,7 @@ void OnTick()
    ulong ticket;
    bool newbuy=true, newsell=true;
    pricebuy = SymbolInfoDouble(_Symbol,SYMBOL_ASK)+(step*_Point);
-   pricesell = SymbolInfoDouble(_Symbol,SYMBOL_BID)+(step*_Point);
+   pricesell = SymbolInfoDouble(_Symbol,SYMBOL_BID)-(step*_Point);
 
    for(int p=0; p<OrdersTotal(); p++)
    {
