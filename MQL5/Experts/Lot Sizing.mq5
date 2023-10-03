@@ -10,9 +10,6 @@
 //| Expert initialization function                                   |
 //+------------------------------------------------------------------+
 
-// 3-10-2023
-// https://www.youtube.com/watch?v=7ukcoP3vEEQ
-
 
 
 #include <Trade/Trade.mqh>
